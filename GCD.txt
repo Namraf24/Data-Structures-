@@ -1,0 +1,32 @@
+02.14 8:53 AM
+Gcd 
+#include<stdio.h>
+#include<stdlib.h>
+/*recursive function*/
+int gcd(int i,int j)
+{
+if(j>i)
+return gcd(j,i);
+if(j==0)
+return i;
+else
+return gcd(j,i%j);
+}
+int main()
+{
+int num1,num2,num3,gcd1,gcd2;
+printf("\nEnter 1st positive integer::");
+scanf("%d",&num1);
+printf("\nEnter 2nd positive integer::");
+scanf("%d",&num2);
+printf("\nEnter 3rd positive integer::");
+scanf("%d",&num3);
+if(num1==0&&num2==0&&num3==0)
+{
+printf("\ninvalid number");
+exit(0);
+}
+gcd2=gcd(num3, gcd(num1, num2));
+printf("\n gcd of [%d,%d,%d]is:[%d]/n",num1,num2,num3,gcd2);
+return 0;
+}

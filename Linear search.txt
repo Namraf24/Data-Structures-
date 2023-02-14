@@ -1,0 +1,30 @@
+02.14 8:58 AM
+Linear search
+#include<stdio.h>
+#include<conio.h>
+int linscr(int a[],int n,int x)
+{
+ int i;
+ for(i=0;i<n;i++)
+  if(a[i]==x)
+  return i+1;
+  return -1;
+}
+void main()
+{
+ int a[10],n,i,pos,x;
+ clrscr();
+ printf("enter the array size:");
+ scanf("%d",&n);
+ printf("enter the array element:");
+  for(i=0;i<n;i++)
+  scanf("%d",&a[i]);
+ printf("enter the array search element:");
+ scanf("%d",&x);
+   pos=linscr(a,n,x);
+   if(pos==-1)
+   printf("search element is unsuccessfull");
+   else
+printf("search successful element found at position: %d",pos);
+   getch();
+}
